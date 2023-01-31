@@ -14,20 +14,20 @@
 
 Bu proje, create-react-app (CRA) kullanılarak oluşturuldu. Bu projenin çalışması için CRA'yı kurmanız gerekmeyecek. Projeyi uygun bağımlılıklarla kurmak için aşağıdaki adımları izleyin.
 
-- [ ]  Projeyi forklayarak bir kopyasını oluşturun.
-- [ ]  Terminalden klonlayın
-- [ ]  Projenin ana dizinine gidin
-- [ ]  `npm install --no-audit` komutuyla bağımlılıkları indirin
-- [ ]  `npm start` ile çalıştırın
-- [ ]  Push commits: git push origin `main`.
+- [x] Projeyi forklayarak bir kopyasını oluşturun.
+- [x] Terminalden klonlayın
+- [x] Projenin ana dizinine gidin
+- [x] `npm install --no-audit` komutuyla bağımlılıkları indirin
+- [x] `npm start` ile çalıştırın
+- [x] Push commits: git push origin `main`.
 
 ### Görev 2a: MUÜ
 
-- [ ]  Bu uygulama, bu proje için gereken iki ana bölüme ayrılabilir: Arama Çubuğu ve Gönderiler.
-- [ ]  Bu projeyi tamamlamak için, sayfanın üst kısmında oluşturulan Arama Çubuğunun tek bir örneğinin yanı sıra `sahte-veri.js` dizisindeki her nesne için ayrı bir gönderi oluşturan bir Gönderi bileşeni olacaktır.
-- [ ]  Gönderileri takip etmek ve stateleri belirlemek için dün öğrendiklerinizi kullanın.
-- [ ]  Gönderilerdeki "beğeni sayısını" artırmak için bir callback uygulayacak ve bunu birkaç seviyeden iç içe geçmiş bir bileşene aktaracaksınız.
-- [ ]  Başlamadan önce kodu gözden geçirin. Bir sürü dosya var. Hepsine kod eklenmesi gerekli değil. App.js dosyasında başlayın ve oradaki talimatları okuyun.
+- [x] Bu uygulama, bu proje için gereken iki ana bölüme ayrılabilir: Arama Çubuğu ve Gönderiler.
+- [x] Bu projeyi tamamlamak için, sayfanın üst kısmında oluşturulan Arama Çubuğunun tek bir örneğinin yanı sıra `sahte-veri.js` dizisindeki her nesne için ayrı bir gönderi oluşturan bir Gönderi bileşeni olacaktır.
+- [x] Gönderileri takip etmek ve stateleri belirlemek için dün öğrendiklerinizi kullanın.
+- [x] Gönderilerdeki "beğeni sayısını" artırmak için bir callback uygulayacak ve bunu birkaç seviyeden iç içe geçmiş bir bileşene aktaracaksınız.
+- [x] Başlamadan önce kodu gözden geçirin. Bir sürü dosya var. Hepsine kod eklenmesi gerekli değil. App.js dosyasında başlayın ve oradaki talimatları okuyun.
 
 ---
 
@@ -35,7 +35,6 @@ Projenin son görüntüsü şu şekilde olmalıdır: [bu](/project-output.png)
 
 ### Görev 3: Ek Görevler
 
-- [ ]  sahte-veri.js dosyasında daha fazla sahte veri oluşturun ve arama çubuğuna arama işlevi ekleyin. Bunu yapmanın bir yolu filtre yöntemidir.
-- [ ]  Bir input kullanarak bir gönderiye yorum ekleme özelliğini uygulayın.
-- [ ]  Tüm uygulamanın stilini tamamlayın ve instagram klonunuzun verilen tasarım özelliklerine çok benzemesini sağlayın.
-
+- [x] sahte-veri.js dosyasında daha fazla sahte veri oluşturun ve arama çubuğuna arama işlevi ekleyin. Bunu yapmanın bir yolu filtre yöntemidir.
+- [ ] Bir input kullanarak bir gönderiye yorum ekleme özelliğini uygulayın.
+- [ ] Tüm uygulamanın stilini tamamlayın ve instagram klonunuzun verilen tasarım özelliklerine çok benzemesini sağlayın.

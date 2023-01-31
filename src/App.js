@@ -5,18 +5,24 @@
 */
 
 // State hook u import edin
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import AramaÇubuğu from "./bileşenler/AramaÇubuğu/AramaÇubuğu";
+import Gönderiler from "./bileşenler/Gönderiler/Gönderiler";
+import sahteVeri from "./sahte-veri";
 
 // Gönderiler (çoğul!) ve AramaÇubuğu bileşenlerini import edin, çünkü bunlar App bileşeni içinde kullanılacak
 // sahteVeri'yi import edin
-import './App.css';
+import "./App.css";
 
 const App = () => {
+  const [gonderiler, setGonderiler] = useState(sahteVeri);
+  const [begenilenler, setBegenilenler] = useState([]);
+
   // Gönderi nesneleri dizisini tutmak için "gonderiler" adlı bir state oluşturun, **sahteVeri'yi yükleyin**.
   // Artık sahteVeri'ye ihtiyacınız olmayacak.
   // Arama çubuğunun çalışması için , arama kriterini tutacak başka bir state'e ihtiyacımız olacak.
-	
-  const gonderiyiBegen = gonderiID => {
+
+  const gonderiyiBegen = (gonderiID) => {
     /*
       Bu fonksiyon, belirli bir id ile gönderinin beğeni sayısını bir artırma amacına hizmet eder.
 
@@ -28,12 +34,31 @@ const App = () => {
         - gönderinin idsi "gonderiID" ile eşleşirse, istenen değerlerle yeni bir gönderi nesnesi döndürün.
         - aksi takdirde, sadece gönderi nesnesini değiştirmeden döndürün.
      */
+
+    setGonderiler(
+      gonderiler.map((item) => {
+        if (gonderiID === item.id && !begenilenler.includes(gonderiID)) {
+          let yeniBegenilenler = [...begenilenler, gonderiID];
+          setBegenilenler(yeniBegenilenler);
+          item.likes++;
+        }
+        return item;
+      })
+    );
+  };
+
+  const aramaYap = (arama) => {
+    const filterArr = [];
+    filterArr = sahteVeri.filter((item) => {
+      return item.username.includes(arama);
+    });
+    setGonderiler(filterArr);
   };
 
   return (
-    <div className='App'>
-      {/* AramaÇubuğu ve Gönderiler'i render etmesi için buraya ekleyin */}
-      {/* Her bileşenin hangi proplara ihtiyaç duyduğunu kontrol edin, eğer ihtiyaç varsa ekleyin! */}
+    <div className="App">
+      <AramaÇubuğu aramaYap={aramaYap} />
+      <Gönderiler gonderiyiBegen={gonderiyiBegen} gonderiler={gonderiler} />
     </div>
   );
 };
